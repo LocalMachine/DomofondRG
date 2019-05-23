@@ -10,7 +10,7 @@ namespace DomofondRG.Models
     public class Photo
     {
         [Key]
-        public int PhotoId { get; set; }
+        public int Id { get; set; }
 
         [Display(Name = "Описание фото"), StringLength(60, MinimumLength = 3)]
         public string Title { get; set; } // описание фото

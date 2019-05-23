@@ -10,9 +10,9 @@ namespace DomofondRG.Models
     public class City
     {
         [Key]
-        public int CityId { get; set; }
+        public int Id { get; set; }
         public string CityName { get; set; }
-        public int RegionId { get; set; }
+        public int? RegionId { get; set; }
 
         [ForeignKey("RegionId")] // внешний ключ поля 
         public virtual Region Region { get; set; }

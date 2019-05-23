@@ -10,7 +10,7 @@ namespace DomofondRG.Models
     public class Favorite
     {
         [Key]
-        public int FavoriteId { get; set; }
+        public int Id { get; set; }
         public int UserId { get; set; }
         public int AdsId { get; set; }
 

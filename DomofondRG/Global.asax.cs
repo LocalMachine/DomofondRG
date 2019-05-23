@@ -14,8 +14,7 @@ namespace DomofondRG
     {
         protected void Application_Start()
         {
-            Database.SetInitializer(new LocationInitializer());
-            Database.SetInitializer(new UserInitializer());
+            Database.SetInitializer(new DataInitializer());
 
             AreaRegistration.RegisterAllAreas();
             FilterConfig.RegisterGlobalFilters(GlobalFilters.Filters);

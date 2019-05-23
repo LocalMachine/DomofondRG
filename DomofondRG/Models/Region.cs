@@ -9,7 +9,7 @@ namespace DomofondRG.Models
     public class Region
     {
         [Key]
-        public int RegionId { get; set; }
+        public int Id { get; set; }
         public string RegionName { get; set; }
 
         public virtual ICollection<City> Cities { get; set; }

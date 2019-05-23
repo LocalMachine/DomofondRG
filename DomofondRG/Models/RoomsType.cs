@@ -9,7 +9,7 @@ namespace DomofondRG.Models
     public class RoomsType
     {
         [Key]
-        public int RoomsTypeId { get; set; }
+        public int Id { get; set; }
         public string RoomsTypeName { get; set; }
 
         public virtual ICollection<Ads> Ads { get; set; } // связная коллекция с таблицей объялений

@@ -10,7 +10,7 @@ namespace DomofondRG.Models
     public class Role
     {
         [Key]
-        public int RoleId { get; set; }
+        public int Id { get; set; }
         public string RoleName { get; set; }
 
         public virtual ICollection<User> Users { get; set; }

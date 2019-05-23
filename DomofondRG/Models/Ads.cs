@@ -10,7 +10,7 @@ namespace DomofondRG.Models
     public class Ads
     {
         [Key]
-        public int AdsId { get; set; }
+        public int Id { get; set; }
 
         public int RegionId { get; set; } // регион  
         public int CityId { get; set; } // город
