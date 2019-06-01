@@ -5,14 +5,14 @@ using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Web;
 
-namespace DomofondRG.Models
+namespace DomofondRG.DAL.Entities
 {
     public class Favorite
     {
         [Key]
         public int Id { get; set; }
-        public int UserId { get; set; }
-        public int AdsId { get; set; }
+        public int? UserId { get; set; }
+        public int? AdsId { get; set; }
 
         [ForeignKey("UserId")]
         public virtual User User { get; set; }
@@ -20,7 +20,5 @@ namespace DomofondRG.Models
         [ForeignKey("AdsId")]
         public virtual Ads Ads { get; set; }
 
-        //[InverseProperty("Favorite")]
-        public virtual ICollection<Ads> AdsCollection { get; set; }
     }
 }

@@ -1,14 +1,12 @@
-﻿using System;
+﻿using DomofondRG.DAL.Entities;
+using System;
 using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
-using System.Linq;
-using System.Web;
+using System.Text;
 
-namespace DomofondRG.Models
+namespace DomofondRG.BLL.DTO
 {
-    public class Region
+    public class RegionDTO
     {
-        [Key]
         public int Id { get; set; }
         public string RegionName { get; set; }
 

@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using System.Data.Entity;
 using System.Linq;
 using System.Web;
-using DomofondRG.Models;
+using DomofondRG.DAL.Entities;
 
-namespace DomofondRG.DAL
+namespace DomofondRG.DAL.EF
 {
     public class DataInitializer : DropCreateDatabaseAlways<DataContext>
     {
@@ -51,6 +51,46 @@ namespace DomofondRG.DAL
             };
 
             User.ForEach(u => context.Users.Add(u));
+            context.SaveChanges();
+
+            // добавление типа объявленя
+            var AdsType = new List<AdsType>
+            {
+                new AdsType { Id = 1, AdsTypeName = "Аренда"},
+                new AdsType { Id = 2, AdsTypeName = "Продажа"},               
+            };
+
+            AdsType.ForEach(a => context.AdsTypes.Add(a));
+            context.SaveChanges();
+
+            // добавление типа недвиж
+            var ObjectsType = new List<ObjectsType>
+            {
+                new ObjectsType { Id = 1, ObjectsTypeName = "Квартира"},
+                new ObjectsType { Id = 2, ObjectsTypeName = "Дом"},
+            };
+
+            ObjectsType.ForEach(o => context.ObjectsTypes.Add(o));
+            context.SaveChanges();
+
+            // добавление комнат
+            var RoomsType = new List<RoomsType>
+            {
+                new RoomsType { Id = 1, RoomsTypeName = "Студия"},
+                new RoomsType { Id = 2, RoomsTypeName = "1"},
+            };
+
+            RoomsType.ForEach(r => context.RoomsTypes.Add(r));
+            context.SaveChanges();
+
+            var StatusType = new List<StatusType>
+            {
+                new StatusType { Id = 1, StatusTypeName = "Активный"},
+                new StatusType { Id = 2, StatusTypeName = "Неактивный"},
+                new StatusType { Id = 3, StatusTypeName = "Заблокированный"},
+            };
+
+            StatusType.ForEach(s => context.StatusTypes.Add(s));
             context.SaveChanges();
 
             base.Seed(context);

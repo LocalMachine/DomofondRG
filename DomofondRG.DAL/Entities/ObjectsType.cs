@@ -4,7 +4,7 @@ using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Web;
 
-namespace DomofondRG.Models
+namespace DomofondRG.DAL.Entities
 {
     public class ObjectsType
     {

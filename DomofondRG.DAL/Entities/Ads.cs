@@ -5,7 +5,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Web;
 
-namespace DomofondRG.Models
+namespace DomofondRG.DAL.Entities
 {
     public class Ads
     {
@@ -23,9 +23,7 @@ namespace DomofondRG.Models
 
         public int StatusTypeId { get; set; } // статус объявления
         public int UserId { get; set; }
-        public int PhotoId { get; set; }
-        public int? FavoriteId { get; set; }
-
+        
         public DateTime DatePublication { get; set; } //  дата публикации объявления
         public DateTime? DateUpdatePublication { get; set; } // дата обновлении объявления
 
@@ -51,17 +49,18 @@ namespace DomofondRG.Models
         [ForeignKey("UserId")]
         public virtual User User { get; set; }
 
-        [ForeignKey("PhotoId")]
-        public virtual Photo Photo { get; set; }
-
-        [ForeignKey("FavoriteId")]
-        public virtual Favorite Favorite { get; set; }
-
-
-        //[InverseProperty("Ads")]
-        //public virtual ICollection<Photo> PhotoCollection { get; set; }
-
-        //[InverseProperty("Ads")]
-        //public virtual ICollection<Favorite> FavoriteCollection { get; set; }
+        public virtual ICollection<Photo> Photos { get; set; }
+        public virtual ICollection<Favorite> Favorites { get; set; }
     }
 }
+
+// необходимо придумать другой способ добавления изображения
+//public int PhotoId { get; set; }
+//public int? FavoriteId { get; set; }
+//public virtual ICollection<Photo> PhotoCollection { get; set; }
+//public virtual ICollection<Favorite> FavoriteCollection { get; set; }
+
+//[ForeignKey("PhotoId")]
+//public virtual Photo Photo { get; set; }
+//[ForeignKey("FavoriteId")]
+//public virtual Favorite Favorite { get; set; }

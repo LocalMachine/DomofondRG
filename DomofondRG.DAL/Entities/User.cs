@@ -5,7 +5,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Web;
 
-namespace DomofondRG.Models
+namespace DomofondRG.DAL.Entities
 {
     public class User
     {
@@ -20,10 +20,8 @@ namespace DomofondRG.Models
         [ForeignKey("RoleId")]
         public virtual Role Role { get; set; }
 
-        //[InverseProperty("User")]
         public virtual ICollection<Ads> Ads { get; set; }
 
-        //[InverseProperty("User")]
         public virtual ICollection<Favorite> Favorites { get; set; }
     }
 }

@@ -1,31 +1,14 @@
-﻿using DomofondRG.Models;
+﻿using DomofondRG.DAL.Entities;
 using System;
 using System.Collections.Generic;
 using System.Data.Entity;
 using System.Linq;
 using System.Web;
 
-namespace DomofondRG.DAL
+namespace DomofondRG.DAL.EF
 {
     public class DataContext : DbContext
     {
-        public DataContext()
-            : base("DomofondConnection")
-        {
-            Database.SetInitializer(new DataInitializer());
-        }
-
-        //protected override void OnModelCreating(DbModelBuilder modelBuilder)
-        //{
-        //    modelBuilder.Entity<City>()
-        //        .HasRequired<Region>(c => c.Region)
-        //        .WithMany(r => r.Cities)
-        //        .HasForeignKey<int>(s => s.RegionId);
-
-        //    base.OnModelCreating(modelBuilder);
-        //}
-
-
         public DbSet<User> Users { get; set; }
         public DbSet<Role> Roles { get; set; }
 
@@ -40,5 +23,27 @@ namespace DomofondRG.DAL
 
         public DbSet<Favorite> Favorites { get; set; }
         public DbSet<Photo> Photos { get; set; }
+
+
+        public DataContext()
+            : base("DomofondConnection")
+        {
+            Database.SetInitializer(new DataInitializer());
+        }
+
+        public DataContext(string connectionString)
+            : base(connectionString)
+        {
+
+        }
+        //protected override void OnModelCreating(DbModelBuilder modelBuilder)
+        //{
+        //    modelBuilder.Entity<Favorite>()
+        //        .HasRequired<User>(u => u.User)
+        //        .WithMany(f => f.Favorites)
+        //        .WillCascadeOnDelete(true);
+
+        //    base.OnModelCreating(modelBuilder);
+        //}
     }
 }

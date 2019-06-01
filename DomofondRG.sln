@@ -5,6 +5,10 @@ VisualStudioVersion = 15.0.28307.136
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DomofondRG", "DomofondRG\DomofondRG.csproj", "{A72495C6-2F74-43C5-A0A5-AAB9A4DC6AAE}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DomofondRG.DAL", "DomofondRG.DAL\DomofondRG.DAL.csproj", "{AEC00B31-7ABB-4705-A3EE-429F733138A7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DomofondRG.BLL", "DomofondRG.BLL\DomofondRG.BLL.csproj", "{142CD3F3-5386-4F57-97F8-885C14FDDB34}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +19,14 @@ Global
 		{A72495C6-2F74-43C5-A0A5-AAB9A4DC6AAE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A72495C6-2F74-43C5-A0A5-AAB9A4DC6AAE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A72495C6-2F74-43C5-A0A5-AAB9A4DC6AAE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AEC00B31-7ABB-4705-A3EE-429F733138A7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AEC00B31-7ABB-4705-A3EE-429F733138A7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AEC00B31-7ABB-4705-A3EE-429F733138A7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AEC00B31-7ABB-4705-A3EE-429F733138A7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{142CD3F3-5386-4F57-97F8-885C14FDDB34}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{142CD3F3-5386-4F57-97F8-885C14FDDB34}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{142CD3F3-5386-4F57-97F8-885C14FDDB34}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{142CD3F3-5386-4F57-97F8-885C14FDDB34}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

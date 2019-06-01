@@ -5,7 +5,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Web;
 
-namespace DomofondRG.Models
+namespace DomofondRG.DAL.Entities
 {
     public class City
     {

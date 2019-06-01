@@ -1,4 +1,4 @@
-﻿using DomofondRG.DAL;
+﻿using DomofondRG.DAL.EF;// добавить
 using System;
 using System.Collections.Generic;
 using System.Data.Entity;
